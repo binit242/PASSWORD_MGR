@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+    w
+    <!-- STYLE -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Form Container -->
+
+    <div class="form-container">
+        <div class="col-1" id="column1">
+            <div class="image-layer">
+                <img src="assets/img/white-outline.png" class="form-image-main" style="z-index: 5;  ">
+                <img src="assets/img/dots.png" class="form-image dots" style="z-index: -5;">
+                <img src="assets/img/coin.png" class="form-image coin" style="z-index: 4; top: 70px     ;">
+                <img src="assets/img/spring.png" class="form-image spring" style="z-index: -7;">
+                <img src="assets/img/rocket.png" class="form-image rocket" style="z-index: -1;">
+                <img src="assets/img/cloud.png" class="form-image cloud">
+                <img src="assets/img/stars.png" class="form-image stars">
+            </div>
+            <pre class="featured-words">
+ 
+ Your companion to secure all your passwords    
+            
+            <span style="text-shadow: 3px 8px 5 rgba(0, 0, 0, 0.2);">PASSMATE</span> </pre>
+        </div>
+        <div class="col col-2">
+            <div class="btn-box">
+                <button class="btn btn-1" id="login"> Sign in </button>
+                <button class="btn btn-2" id="register"> Sign up </button>
+            </div>
+
+            <!-- Login Form Container -->
+
+            <div class="login-form">
+                <div class="form-title">
+                    <span>Sign in</span>
+                </div>
+                <div class="form-inputs">
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Username" required id="usn">
+                        <i class="bx bx-user icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input-field" placeholder="Password" required id="pass">
+                        <i class="bx bx-low-vision icon" onclick="togVis(this)"></i>
+                    </div>
+                    <div class="forgot-pass">
+                        <a href="#">Forgot Password ? </a>
+                    </div>
+                    <div class="input-box">
+                        <!-- <a href="D:\unique projects\passx-password-manager-main\index.html"> -->
+                        <button class=" input-submit" onclick="func1()">
+                            <span> Sign in </span>
+                            <i class="bx bx-right-arrow-alt "></i>
+                        </button>
+                        <!-- </a> -->
+                    </div>
+                </div>
+                <div class="social-login">
+                    <i class="bx bxl-google" id="gog"></i>
+                    <i class="bx bxl-facebook" id="fb"></i>
+                    <i class="bx bxl-twitter" id="twt"></i>
+                    <i class="bx bxl-github" id="git"></i>
+                </div>
+            </div>
+
+            <!-- Register Form Container -->
+
+            <div class="register-form">
+                <div class="form-title">
+                    <span>Create Account</span>
+                </div>
+                <div class="form-inputs">
+                    <div class="input-box">
+                        <input type="email" class="input-field" placeholder="email" required id="em1">
+                        <i class="bx bx-envelope icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Username" required>
+                        <i class="bx bx-user icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input-field" placeholder="Password" id="newpass" required>
+                        <i class="bx bx-low-vision icon" onclick="togVis1(this) "></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input-field" placeholder="Confirm Password" id="confpass" required>
+                        <i class="bx bx-low-vision icon" onclick="togVis2(this)"></i>
+                    </div>
+                    <div class="input-box">
+                        <!-- <a href="D:\unique projects\passx-password-manager-main\Login page\index.html"> -->
+                        <button class="input-submit" onclick="func2()">
+                            <span> Sign up </span>
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                        <!-- </a> -->
+                    </div>
+                </div>
+                <div class="social-login">
+                    <i class="bx bxl-google" id="gog"></i>
+                    <i class="bx bxl-facebook" id="fb"></i>
+                    <i class="bx bxl-twitter" id="twt"></i>
+                    <i class="bx bxl-github" id="git"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- 
+    <script src="assets/js/main.js "></script>
+
+-->
+
+    <script>
+        // Variable Declaration
+
+        const loginBtn = document.querySelector("#login");
+        const registerBtn = document.querySelector("#register");
+        const loginForm = document.querySelector(".login-form");
+        const registerForm = document.querySelector(".register-form");
+        var p = document.getElementById("pass"),
+            np = document.getElementById("newpass"),
+            c_p = document.getElementById("confpass");
+
+
+
+        // Login button function
+
+
+        loginBtn.addEventListener('click', () => {
+            loginBtn.style.backgroundColor = "#21264D";
+            registerBtn.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
+            loginForm.style.left = "50%";
+            registerForm.style.left = "-50%";
+            loginForm.style.opacity = 1;
+            registerForm.style.opacity = 0;
+
+            document.querySelector(".column1").style.borderRadius = "O 30% 20% 0";
+        })
+
+        // Register button function
+
+        registerBtn.addEventListener('click', () => {
+            loginBtn.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
+            registerBtn.style.backgroundColor = "#21264D";
+            loginForm.style.left = "150%";
+            registerForm.style.left = "0%";
+            loginForm.style.opacity = 0;
+            registerForm.style.opacity = 1;
+
+            document.querySelector(".column1").style.borderRadius = "O 20% 30% 0";
+        })
+
+
+        // password confirmation function
+
+        function validatePassword() {
+            if (p.value != c_p.value) {
+                c_p.setCustomValidity("Passwords Doesn't Match");
+            } else {
+                c_p.setCustomValidity("Granted");
+            }
+        }
+
+        p.onchange = validatePassword;
+        c_p.onkeyup = validatePassword;
+
+        //password cisibility toggle
+
+        function togVis() {
+
+            var getPasword = document.getElementById("pass");
+            if (getPasword.type === "password") {
+                getPasword.type = "text";
+                getPasword.class.remove('bx-low-vision');
+                getPasword.class.add('bx-cctv');
+            } else {
+                getPasword.type = "password";
+                getPasword.class.remove('bx-cctv');
+                getPasword.class.add('bx-low-vision');
+            }
+        }
+
+        function togVis1() {
+
+            var getPasword1 = document.getElementById("newpass");
+            if (getPasword1.type === "password") {
+                getPasword1.type = "text";
+                getPasword1.class.remove('bx-low-vision');
+                getPasword1.class.add('bx-cctv');
+            } else {
+                getPasword1.type = "password";
+                getPasword1.class.remove('bx-cctv');
+                getPasword1.class.add('bx-low-vision');
+            }
+        }
+
+        function togVis2() {
+
+            var getPasword2 = document.getElementById("confpass");
+            if (getPasword2.type === "password") {
+                getPasword2.type = "text";
+                getPasword2.class.remove('bx-low-vision');
+                getPasword2.class.add('bx-cctv');
+            } else {
+                getPasword2.type = "password";
+                getPasword2.class.remove('bx-cctv');
+                getPasword2.class.add('bx-low-vision');
+            }
+        }
+
+        function func1() {
+            var Username = document.getElementById("usn").value;
+            var password = document.getElementById("pass").value;
+            if (Username != '' && password != '') {
+                window.location.assign("passmgr.html")
+            } else {
+                alert("Enter something to those fields")
+            }
+        }
+
+        function func2() {
+            var Username = document.getElementById("em1").value;
+            var password = document.getElementById("newpass").value;
+            var conform_password = document.getElementById("confpass").value;
+            if (Username != '' && password != '' && conform_password != '') {
+                window.location.assign("Login page\index.html")
+            } else {
+                alert("Enter something to those fields")
+            }
+        }
+    </script>
+
+</body>
+
+</html>

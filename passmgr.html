@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- BOXICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="brand">
+            <pre id="log">    PASS<span>Mate</span>                                                  </pre>
+        </a>
+        <div class="op">
+            <a href="#tit" class="active">Home</a>
+            <a href="#ser" class="active">Services</a>
+            <a href="#contactsss" class="active">Contact</a>
+
+        </div>
+    </nav>
+    <section id="tit">
+        <div id="logo">
+            <div id='txt2' data-text="PASSMATE">
+                <h1>PASSMATE</h1>
+            </div>
+
+        </div>
+        <img src="img/tex.png" id="tex">
+        <img src="img/lock-body.png" id="locbod">
+        <img src="img/lock-head.png" id="lochd">
+
+    </section>
+    <img src="img/bgs.jpg" id="bg">
+    <section id="ser">
+        <div class="container">
+            <h1>Password Manager</h1>
+            <div class="form-container">
+                <input type="text" id="website" placeholder="Website Name">
+                <input type="password" id="password" placeholder="Password">
+                <button id="add-btn">Add Password</button>
+            </div>
+            <div class="password-list">
+                <ul id="password-list"></ul>
+            </div>
+        </div>
+        <div class="social-login" id="contactsss">
+            <a href="https://www.instagram.com/p/DCMP6LEy1xl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><i class="bx bxl-instagram" id="gog"></i></a>
+            <a href="https://www.facebook.com/kutu.ghosh.980"><i class="bx bxl-facebook" id="fb"></i></a>
+            <a href="https://x.com/BinitGhosh70/status/1858050875517972678"><i class="bx bxl-twitter" id="twt"></i></a>
+            <a href="https://discord.gg/ta66kj5u"><i class="bx bxl-discord" id="dis"></i></a>
+            <a href="https://github.com/binit242"><i class="bx bxl-github" id="git"></i></a>
+            <a href="https://www.linkedin.com/in/binit-ghosh?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bx bxl-linkedin" id="tel"></i></a>
+        </div>
+    </section>
+    <!-- Custom Popup HTML -->
+    <div id="custom-popup" class="popup hidden">
+        <div class="popup-content">
+            <div id="popup-message"></div>
+            <div id="popup-input-container" class="hidden">
+                <input type="text" id="popup-input" placeholder="New Password">
+            </div>
+            <div class="popup-buttons">
+                <button id="popup-ok">OK</button>
+                <button id="popup-cancel" class="hidden">Cancel</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <section id="Contact">
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

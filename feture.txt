@@ -1,0 +1,25 @@
+/*
+const signin = document.querySelector("#sin");
+const signup = document.querySelector("#sup");    
+*/
+/*
+signin.addEventListener('click', ssin());
+
+function ssin() {
+    if (p.value != 0) {
+        window.location.open = ("D:\unique projects\passx-password-manager-main\index.html");
+    } else {
+        alert("Enter something to the fields respectively !");
+    }
+}
+
+signup.addEventListener('click', ssup());
+
+function ssup() {
+    if (c_p.value != 0) {
+        window.location.open = ("D:\unique projects\passx-password-manager-main\Login page\index.html");
+    } else {
+        alert("Enter something to the fields respectively !");
+    }
+}
+*/
